@@ -1,12 +1,12 @@
 import React from 'react';
 import Bredcumb from '../../components/shared/Bredcumb';
 
-const Contact = () => {
+const Team = () => {
     return (
         <div>
-           <Bredcumb/>
+            <Bredcumb/>
         </div>
     );
 };
 
-export default Contact;
+export default Team;

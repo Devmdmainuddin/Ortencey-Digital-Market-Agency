@@ -116,16 +116,16 @@ const Navbar = () => {
                                 {links.map((link, index) => (
                                     <li key={index}>
                                         <NavLink to={link.path} className='border-b-2 pb-9 border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500'>{link.title}</NavLink>
-                                    </li>    
+                                    </li>
                                 ))}
                             </ul>
                         </nav>
                         {/* Profile */}
                         <div className=" hidden lg:flex  gap-6 items-center">
-                           <button className="border border-[#3661fc] text-[#3661fc] text-xl bg-[#f4f4ff] p-4 rounded-full"><CiSearch /></button>
-                           <button className="border-2 border-[#3661fc] text-[#3661fc] text-xl bg-[#f4f4ff] p-4 rounded-full relative"><AiOutlineShopping /> <span className="absolute top-1 -right-2 bg-[#3661fc] text-white text-[12px] rounded-full p-1 w-5 h-5  flex justify-center items-center">3</span></button>
-                           <button className="text-white bg-[#3661fc] py-[15px] px-[29px] font-dm-sans text-[18px] font-normal leading-[26px] flex items-center gap-4 rounded-full"> Free Quote  <FaArrowRightLong /></button>
-                          
+                            <button className="border border-[#3661fc] text-[#3661fc] text-xl bg-[#f4f4ff] p-4 rounded-full"><CiSearch /></button>
+                            <button className="border-2 border-[#3661fc] text-[#3661fc] text-xl bg-[#f4f4ff] p-4 rounded-full relative"><AiOutlineShopping /> <span className="absolute top-1 -right-2 bg-[#3661fc] text-white text-[12px] rounded-full p-1 w-5 h-5  flex justify-center items-center">3</span></button>
+                            <button className="text-white bg-[#3661fc] py-[15px] px-[29px] font-dm-sans text-[18px] font-normal leading-[26px] flex items-center gap-4 rounded-full"> Free Quote  <FaArrowRightLong /></button>
+
                         </div>
                         {/* Hamburger */}
                         <div className="flex items-center gap-4 lg:hidden ">
@@ -169,33 +169,7 @@ const Navbar = () => {
                 </Container>
 
             </div>
-            <div className="w-full h-auto md:h-[950px] py-[138px] bg-[#333333] bg-cover bg-no-repeat flex justify-center items-center">
-                <Container>
-                    <div className="flex justify-between flex-col md:flex-row items-center gap-[111px]">
-                        <div>
-                            <h3 className="text-[#FE651B] font-dm-sans text-xl lg:text-[25px] font-medium leading-[25px] tracking-normal  capitalize">Your Trusted Ortencey Agency</h3>
-                            <h2 className="max-w-[695px] mt-5 text-white font-nunito text-2xl md:text-10 lg:text-[58px] font-extrabold  lg:leading-[70px] tracking-normal  capitalize">Our Digital Agency With
-                                Excellence Services</h2>
-                            <p className="max-w-[596px] text-white font-dm-sans text-lg lg:text-[20px] font-medium  lg:leading-[30px] tracking-normal  capitalize mt-5">The 3 golden rules professional Digital Marketing Agency don’t
-
-                                want you to know about.</p>
-                            <button className="text-white font-dm-sans text-[18px] font-normal leading-[30px]  capitalize py-[15px] px-[33px] rounded-full bg-[#FE651B] mt-[50px]"> Discover More</button>
-                        </div>
-                        <div>
-                            <div className=" md:w-[359px] md:h-[359px] lg:w-[559px] lg:h-[559px] relative border border-[#FE651B] rounded-full">
-                                <Image src='/hero-bg.jpg' alt='hero image' className='rounded-full relative top-12 right-12'></Image>
-                               
-                            </div>
-
-                        </div>
-
-
-
-
-                    </div>
-                </Container>
-
-            </div>
+          
         </div>
     );
 };

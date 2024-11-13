@@ -14,21 +14,21 @@ const Category = () => {
         {
             id:2,
             name: 'Web Development',
-            icon:'/Group.png',
+            icon:'/Vector.png',
             image: '/bgca.jpg',
             description: 'Contrary to popular belief, Lorem Ips is not simply random text. It has root in a piece of classical.',
         },
         {
             id:3,
             name: 'app Design',
-            icon:'/Group.png',
+            icon:'/m.png',
             image: '/bgca.jpg',
             description: 'Contrary to popular belief, Lorem Ips is not simply random text. It has root in a piece of classical.',
         },
         {
             id:4,
             name: 'Digital Marketing',
-            icon:'/Group.png',
+            icon:'/u.png',
             image: '/bgca.jpg',
             description: 'Contrary to popular belief, Lorem Ips is not simply random text. It has root in a piece of classical.',
         }
