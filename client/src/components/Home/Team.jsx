@@ -1,9 +1,6 @@
-import { useState } from "react";
 import { TbTargetArrow } from "react-icons/tb";
-import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import Tm from "/bgca.jpg";
 import Tm1 from "/bgca.jpg";
-import { Link } from "react-router-dom";
 import TeamCard from "../card/TeamCard";
 import Container from "../shared/Container";
 
