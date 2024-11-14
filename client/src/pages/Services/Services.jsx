@@ -1,5 +1,7 @@
 import Service from "../../components/Service";
+import ServiceTestimonial from "../../components/ServiceTestimonial";
 import Bredcumb from "../../components/shared/Bredcumb";
+import Support from "../../components/Support";
 import WorkProsses from "../../components/WorkProsses";
 
 
@@ -44,6 +46,8 @@ const Services = () => {
 
             </div> */}
 <WorkProsses/>
+<Support/>
+<ServiceTestimonial/>
 
         </div>
     );

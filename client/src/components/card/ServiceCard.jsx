@@ -6,7 +6,7 @@ const ServiceCard = ({ item }) => {
     return (
         <div className="group p-5 bg-[#F4F4FE] rounded-[50px] flex gap-6 justify-between flex-col lg:flex-row items-center border  hover:border-[#FE651B] transition-all duration-500">
             <div>
-                <div className="w-[390px] h-[197px] rounded-[50px] ">
+                <div className="w-full md:w-[390px] h-auto md:h-[197px] rounded-[50px] ">
                     <Image src={image} alt="" className="rounded-[50px] " />
                 </div>
             </div>
