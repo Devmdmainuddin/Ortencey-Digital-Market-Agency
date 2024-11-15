@@ -49,6 +49,14 @@ const Navbar = () => {
             title: 'contact',
             path: '/contact'
         },
+        {
+            title: 'pricing',
+            path: '/pricing'
+        },
+        {
+            title: 'testimonials',
+            path: '/testimonials'
+        },
 
     ]
     useEffect(() => {

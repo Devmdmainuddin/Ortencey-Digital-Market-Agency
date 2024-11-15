@@ -5,7 +5,10 @@ import Image from "../../components/shared/Image";
 import { FaCheck, FaTwitter } from "react-icons/fa6";
 import { MdCall, MdMessage } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import "swiper/css";
+import 'swiper/css/navigation';
+import {Autoplay, Navigation,  } from 'swiper/modules';
 
 const PortfolioDetails = () => {
     return (
@@ -106,6 +109,69 @@ const PortfolioDetails = () => {
                         </div>
                     </div>
 
+                </div>
+                {/* similar projects */}
+                <div className="my-[120px]">
+                    <h2 className="text-[#1a1a1a] text-[46px] font-bold leading-[56px] font-nunito ">Our Similar Projects </h2>
+                    <div className="">
+                    <Swiper
+                            loop={true}
+                            navigation={true}
+                           
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                              }}
+                            modules={[Navigation,Autoplay]}
+                            breakpoints={{
+                                320: {
+                                    slidesPerView: 1,
+                                    slidesPerGroup: 1,
+                                },
+                               
+                                895: {
+                                    slidesPerView: 2,
+                                    slidesPerGroup: 1,
+                                },
+                                1324: {
+                                    slidesPerView: 3,
+                                    slidesPerGroup: 1,
+                                },
+                            }}
+                            spaceBetween={10}
+
+                            className="mySwiper Popular"
+                        >
+                          <SwiperSlide >
+                          <div className="image1  h-[462px] rounded-[20px]">
+                                    <Image src='/bgca.jpg' alt='' className='rounded-[20px]'></Image>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide >
+                            <div className="image1  h-[462px] rounded-[20px]">
+                                    <Image src='/bgca.jpg' alt='' className='rounded-[20px]'></Image>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide >
+                            <div className="image1  h-[462px] rounded-[20px]">
+                                    <Image src='/bgca.jpg' alt='' className='rounded-[20px]'></Image>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide >
+                            <div className="image1  h-[462px] rounded-[20px]">
+                                    <Image src='/bgca.jpg' alt='' className='rounded-[20px]'></Image>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide >
+                            <div className="image1  h-[462px] rounded-[20px]">
+                                    <Image src='/bgca.jpg' alt='' className='rounded-[20px]'></Image>
+                                </div>
+                            </SwiperSlide>
+
+
+
+                        </Swiper>
+                    </div>
                 </div>
             </Container>
         </div>

@@ -11,6 +11,8 @@ import ServiceDetails from "../pages/Details/ServiceDetails";
 import TeamDetails from "../pages/Details/TeamDetails";
 import Portfolio from "../pages/Portfolio/Portfolio";
 import PortfolioDetails from "../pages/Details/PortfolioDetails";
+import Pricing from "../pages/Pricing/Pricing";
+import Testimonial from "../pages/Testimonial/Testimonial";
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -53,7 +55,15 @@ export const router = createBrowserRouter([
           path: "/news",
           element: <News />,
         },
-     
+        {
+          path: "/pricing",
+          element: <Pricing />,
+        },
+        {
+          path: "/testimonials",
+          element: <Testimonial />,
+        },
+        
         {
           path: "/contact",
           element: <Contact />,
