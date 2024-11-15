@@ -11,7 +11,7 @@ const ServiceDetails = () => {
         <div>
             <Bredcumb />
             <Container>
-                <div className="my-[120px] flex justify-between gap-[90px]">
+                <div className="my-[120px] flex justify-between gap-6 xl:gap-[30px] flex-col lg:flex-row">
                     <main className="flex-1">
                         <div className="h-[450px]">
                             <Image src="/bgca.jpg" className='rounded-[20px] border-[10px] border-[#F4F4FE]'></Image>
@@ -21,9 +21,9 @@ const ServiceDetails = () => {
                             <p className="mt-5 text-[#6B6161] font-dm-sans text-base font-normal leading-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don{`'`}t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn{`'`}t anything embarrassing hidden in the middle of textss. All the Lorem Ipsum generators on the Internet tend to repeat</p>
                         </div>
 
-                        <div className="mt-12 flex justify-between gap-6">
+                        <div className="mt-12 flex justify-between flex-col lg:flex-row gap-[194px] lg:gap-6">
                             <div className="image">
-                                <div className="relative w-[342px] h-[408px]">
+                                <div className="relative w-[267px] xl:w-[342px] md:h-[322px] xl:h-[408px]">
                                     <Image src="/bgca.jpg" className='rounded-[20px] ' />
                                     <Image src="/bgca.jpg" className='rounded-[20px] absolute top-1/2 left-1/2 border-[10px] border-white' />
                                 </div>
@@ -84,7 +84,7 @@ const ServiceDetails = () => {
                         </div>
 
                     </main>
-                    <aside className="w-[464px] ">
+                    <aside className="w-full md:w-[324px] xl:w-[464px] ">
                         <div className="rounded-[20px] p-10 shadow-[0px_0px_45px_0px_rgba(0,0,0,0.08)] bg-white group">
                             <h2 className="text-[#1a1a1a] font-nunito text-[25px] font-bold leading-[34px] relative  before:absolute before:-bottom-2.5  before:w-full before:h-[2px] before:bg-[#EDEDFF] after:absolute after:-bottom-2.5 after:left-0   after:bg-red-500 after:w-[60px] after:h-[2px] after:rounded-full after:content-[''] after:animate-leftToRight group-hover:after:w-full transition-all duration-500">Our All Service</h2>
                             <div className="mt-6">

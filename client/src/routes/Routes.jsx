@@ -8,6 +8,7 @@ import Services from "../pages/Services/Services";
 import News from "../pages/News/News";
 import Team from "../pages/Team/Team";
 import ServiceDetails from "../pages/Details/ServiceDetails";
+import TeamDetails from "../pages/Details/TeamDetails";
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -27,8 +28,12 @@ export const router = createBrowserRouter([
           element: <Services />,
         },
         {
-          path: "/details",
+          path: "/serviceDetails",
           element: <ServiceDetails />,
+        },
+        {
+          path: "/teamDetails",
+          element: <TeamDetails />,
         },
         {
           path: "/team",

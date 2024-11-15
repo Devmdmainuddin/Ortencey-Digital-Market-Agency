@@ -17,7 +17,7 @@ const ServiceCard = ({ item }) => {
 
             </div>
             <div className="bottons  ">
-                <Link className="w-[155px] py-[15px] px-[33px] mt-9 text-[#1A1A1A] group-hover:text-white  border border-[#FE651B] group-hover:bg-gradient-to-r from-[#FE651B] to-[#FFAA52] rounded-full mr-auto inline-block transition-all duration-500">Read More</Link>
+                <Link to='/serviceDetails' className="w-[155px] py-[15px] px-[33px] mt-9 text-[#1A1A1A] group-hover:text-white  border border-[#FE651B] group-hover:bg-gradient-to-r from-[#FE651B] to-[#FFAA52] rounded-full mr-auto inline-block transition-all duration-500">Read More</Link>
             </div>
         </div>
     );
