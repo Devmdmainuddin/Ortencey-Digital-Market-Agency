@@ -9,6 +9,8 @@ import News from "../pages/News/News";
 import Team from "../pages/Team/Team";
 import ServiceDetails from "../pages/Details/ServiceDetails";
 import TeamDetails from "../pages/Details/TeamDetails";
+import Portfolio from "../pages/Portfolio/Portfolio";
+import PortfolioDetails from "../pages/Details/PortfolioDetails";
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -36,8 +38,16 @@ export const router = createBrowserRouter([
           element: <TeamDetails />,
         },
         {
+          path: "/portfolioDetails",
+          element: <PortfolioDetails />,
+        },
+        {
           path: "/team",
           element: <Team />,
+        },
+        {
+          path: "/portfolio",
+          element: <Portfolio />,
         },
         {
           path: "/news",

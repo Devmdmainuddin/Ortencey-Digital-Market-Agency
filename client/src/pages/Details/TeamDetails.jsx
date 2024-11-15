@@ -14,7 +14,7 @@ const TeamDetails = () => {
         <div>
             <Bredcumb />
             <Container>
-                <div className="flex gap-6 justify-between flex-wrap bg-[#F4F4FF] py-12 px-[50px]">
+                <div className="flex gap-6 justify-between flex-wrap bg-[#F4F4FF] mt-[120px] mb-[56px] p-[30px]">
                     <div className="image w-[555px] h-[535px] rounded-[20px]">
                         <Image src="/bgca.jpg" alt="Team Member" className='rounded-[20px]' />
                     </div>

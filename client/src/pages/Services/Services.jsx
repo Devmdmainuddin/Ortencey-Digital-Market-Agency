@@ -9,7 +9,7 @@ const Services = () => {
     return (
         <div className="">
             <Bredcumb />
-           <Service/>
+            <Service />
             {/* <div className="flex gap-6 flex-wrap justify-center bg-[#F7F7FF]">
 
                 <div className="bg-[url('/sa.png')] w-[464px] h-[213px] group">
@@ -45,9 +45,9 @@ const Services = () => {
 
 
             </div> */}
-<WorkProsses/>
-<Support/>
-<ServiceTestimonial/>
+            <WorkProsses />
+            <Support />
+            <ServiceTestimonial />
 
         </div>
     );

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Bredcumb from '../../components/shared/Bredcumb';
 
 const Contact = () => {

@@ -118,6 +118,9 @@ const Navbar = () => {
                                         <NavLink to={link.path} className='border-b-2 pb-9 border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500'>{link.title}</NavLink>
                                     </li>
                                 ))}
+                                <li>
+                                    <Link to="/portfolio" className='border-b-2 pb-9 border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500'>portfolio</Link>
+                                </li>
                             </ul>
                         </nav>
                         {/* Profile */}
