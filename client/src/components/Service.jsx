@@ -37,6 +37,7 @@ const Service = () => {
                             <h3 className="text-[#FE651B] font-dm-sans text-[20px] font-medium leading-[26px]">Our Services</h3>
                         </div>
                         <h2 className="text-[#1a1a1a] mt-4 font-nunito text-[46px] font-extrabold leading-[56px]">Best Quality Services</h2>
+                    
                     </div>
 
                     <div className=" mt-[46px] flex flex-col gap-6">

@@ -9,6 +9,7 @@ import { CiSearch } from "react-icons/ci";
 import { AiOutlineShopping } from "react-icons/ai";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaFacebookF, FaInstagramSquare, FaLinkedin, } from "react-icons/fa";
+import { IoIosArrowDown } from "react-icons/io";
 // IoMdClose,
 const Navbar = () => {
 
@@ -107,7 +108,7 @@ const Navbar = () => {
 
             <div className=" z-10 w-full  absolute " >
                 <Container className=''>
-                    <div className=" max-w-[1369px] mx-auto p-[17px] bg-white rounded-tl-full rounded-bl-full  flex items-center justify-between ">
+                    <div className=" max-w-[1369px] mx-auto p-[17px] bg-white rounded-full  flex items-center justify-between ">
                         <div className="logo flex gap-4 items-center">
                             <div className="w-[66px] h-[66px]">
                                 <Image src='/Icon.png' clt='logo image'></Image>
@@ -119,23 +120,75 @@ const Navbar = () => {
                             </div>
 
                         </div>
-                        <nav className="hidden md:inline-block">
+                        <nav className="hidden lg:inline-block">
                             <ul className={`flex gap-6 items-center`}>
-                                {links.map((link, index) => (
+                                {/* {links.map((link, index) => (
                                     <li key={index}>
                                         <NavLink to={link.path} className='border-b-2 pb-9 border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500'>{link.title}</NavLink>
                                     </li>
-                                ))}
+                                ))} */}
                                 <li>
-                                    <Link to="/portfolio" className='border-b-2 pb-9 border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500'>portfolio</Link>
+                                    <Link to="/" className='border-b-2 pb-9 border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500'>Home</Link>
+                                </li>
+                                <li>
+                                    <Link to="/shop" className='border-b-2 pb-9 border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500'>Shop</Link>
+                                </li>
+                                <li>
+                                    <Link to="/about" className='border-b-2 pb-9 border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500'>about</Link>
+                                </li>
+                                <li>
+                                    <Link to="/services" className='border-b-2 pb-9 border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500'>Services</Link>
+                                </li>
+                                <li>
+                                    <Link to="/team" className='border-b-2 pb-9 border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500'>Team</Link>
+                                </li>
+                                <li className="group relative cursor-pointer ">
+                                    <Link className='border-b-2 py-6 flex items-center justify-between border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500 gap-2'>Pages <IoIosArrowDown /> </Link>
+                                    <div className="invisible absolute z-50 flex w-[180px] flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible">
+
+                                        <Link to='/pricing' className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+                                            Pricing
+                                        </Link>
+
+                                        <Link to='/testimonials' className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+                                            Testimonial
+                                        </Link>
+
+                                        <Link to='/blogs' className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+                                            Blogs
+                                        </Link>
+
+                                        <Link to='/blogsRightSide' className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+                                            BlogRightSide
+                                        </Link>
+
+                                        <Link to='/blogsLeftSide' className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+                                            BlogLeftSide
+                                        </Link>
+                                        <Link to='/faq' className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+                                            Faq
+                                        </Link>
+
+
+
+                                    </div>
+                                </li>
+
+
+                                <li>
+                                    <Link to="/news" className='border-b-2 pb-9 border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500'>News</Link>
+                                </li>
+                                <li>
+                                    <Link to="/contact" className='border-b-2 pb-9 border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500'>Contact</Link>
                                 </li>
                             </ul>
                         </nav>
+
                         {/* Profile */}
                         <div className=" hidden lg:flex  gap-6 items-center">
                             <button className="border border-[#3661fc] text-[#3661fc] text-xl bg-[#f4f4ff] p-4 rounded-full"><CiSearch /></button>
                             <button className="border-2 border-[#3661fc] text-[#3661fc] text-xl bg-[#f4f4ff] p-4 rounded-full relative"><AiOutlineShopping /> <span className="absolute top-1 -right-2 bg-[#3661fc] text-white text-[12px] rounded-full p-1 w-5 h-5  flex justify-center items-center">3</span></button>
-                            <button className="text-white bg-[#3661fc] py-[15px] px-[29px] font-dm-sans text-[18px] font-normal leading-[26px] flex items-center gap-4 rounded-full"> Free Quote  <FaArrowRightLong /></button>
+                            <button className="hidden  text-white bg-[#3661fc] py-[15px] px-[29px] font-dm-sans text-[18px] font-normal leading-[26px] xl:flex items-center gap-4 rounded-full"> Free Quote  <FaArrowRightLong /></button>
 
                         </div>
                         {/* Hamburger */}
@@ -180,7 +233,7 @@ const Navbar = () => {
                 </Container>
 
             </div>
-          
+
         </div>
     );
 };

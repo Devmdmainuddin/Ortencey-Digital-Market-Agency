@@ -11,7 +11,9 @@ const Error = () => {
         <div>
              <Navbar/>
             {/* Bredcumb */}
-            <div className="bg-[url('/ab.webp')] bg-cover bg-no-repeat h-[368px] md:h-[456px] lg:h-[654px] flex items-center justify-center ">
+            <div style={{
+                                            backgroundImage: `linear-gradient(180deg, hsla(0, 0%, 6%, 0) 41.54%, hsla(0, 0%, 6%, 0.621) 72.29%, #101010), url('/ab.webp')`
+                                        }} className=" bg-cover bg-no-repeat h-[368px] md:h-[456px] lg:h-[654px] flex items-center justify-center ">
                 <Container>
                     <div className='py-8  md:py-[50px] '>
 

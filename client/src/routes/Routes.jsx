@@ -13,6 +13,15 @@ import Portfolio from "../pages/Portfolio/Portfolio";
 import PortfolioDetails from "../pages/Details/PortfolioDetails";
 import Pricing from "../pages/Pricing/Pricing";
 import Testimonial from "../pages/Testimonial/Testimonial";
+import Blog from "../pages/Blog/Blog";
+import Cart from "../pages/Cart/Cart";
+import CheckOut from "../pages/CheckOut/CheckOut";
+import BlogLeftSide from "../pages/Blog/BlogLeftSide";
+import BlogRightSide from "../pages/Blog/BlogRightSide";
+import ShopDetails from "../pages/Details/ShopDetails";
+import BlogDetails from "../pages/Details/BlogDetails";
+import Faq from "../pages/Faq/Faq";
+import Shop from "../pages/Shop/Shop";
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -44,8 +53,20 @@ export const router = createBrowserRouter([
           element: <PortfolioDetails />,
         },
         {
+          path: "/shopsDetails",
+          element: <ShopDetails />,
+        },
+        {
+          path: "/blogsDetails",
+          element: <BlogDetails />,
+        },
+        {
           path: "/team",
           element: <Team />,
+        },
+        {
+          path: "/faq",
+          element: <Faq />,
         },
         {
           path: "/portfolio",
@@ -68,6 +89,31 @@ export const router = createBrowserRouter([
           path: "/contact",
           element: <Contact />,
         },
+        {
+          path: "/blogs",
+          element: <Blog />,
+        },
+        {
+          path: "/blogsRightSide",
+          element: <BlogRightSide />,
+        },
+        {
+          path: "/blogsLeftSide",
+          element: <BlogLeftSide />,
+        },
+        {
+          path: "/shop",
+          element: <Shop/>,
+        },
+        {
+          path: "/yourcart",
+          element: <Cart />,
+        },
+        {
+          path: "/checkout",
+          element: <CheckOut />,
+        },
+
         // {
         //   path: "/login",
         //   element: <Login />,

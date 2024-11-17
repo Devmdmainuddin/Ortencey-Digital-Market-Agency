@@ -10,7 +10,7 @@ const Count = () => {
                         {/* <div className=""> */}
                             <div className="w-[342px] flex gap-2 items-center p-10 bg-[#F4F4FE] rounded-[20px]">
                                 <div className="image w-[80px] h-[80px] rounded-full bg-[#3661FC] flex justify-center items-center">
-                                    <Image src="/ac.png" alt="" className='w-9 h-9 '/>
+                                    <img src="/ac.png" alt="" className='w-9 h-9 '/>
                                 </div>
                                 <div className="content">
                                     <h2 className="text-[#1A1A1A] text-center font-dm-sans text-[45px] font-bold leading-[36px]">1500</h2>
@@ -19,7 +19,7 @@ const Count = () => {
                             </div>
                             <div className="w-[342px] flex gap-2 items-center p-10 bg-[#F4F4FE] rounded-[20px]">
                                 <div className="image w-[80px] h-[80px] rounded-full bg-[#3661FC] flex justify-center items-center">
-                                    <Image src="/ca2.png" alt="" className='w-9 h-9 '/>
+                                    <img src="/ca2.png" alt="" className='w-9 h-9 '/>
                                 </div>
                                 <div className="content"> 
                                     <h2 className="text-[#1A1A1A] text-center font-dm-sans text-[45px] font-bold leading-[36px]">150+</h2>
@@ -28,7 +28,7 @@ const Count = () => {
                             </div>
                             <div className="w-[342px] flex gap-2 items-center p-10 bg-[#F4F4FE] rounded-[20px]" >
                                 <div className="image w-[80px] h-[80px] rounded-full bg-[#3661FC] flex justify-center items-center">
-                                    <Image src="/ca3.png" alt="" className='w-9 h-9 '/>
+                                    <img src="/ca3.png" alt="" className='w-9 h-9 '/>
                                 </div>
                                 <div className="content">
                                     <h2 className="text-[#1A1A1A] text-center font-dm-sans text-[45px] font-bold leading-[36px]">95+</h2>
@@ -37,7 +37,7 @@ const Count = () => {
                             </div>
                             <div className="w-[342px] flex gap-2 items-center p-10 bg-[#F4F4FE] rounded-[20px]" >
                                 <div className="image w-[80px] h-[80px] rounded-full bg-[#3661FC] text-white flex justify-center items-center">
-                                    <Image src="/ca4.png" alt="" className='w-9 h-9 '/>
+                                    <img src="/ca4.png" alt="" className='w-9 h-9 '/>
                                 </div>
                                 <div className="content">
                                     <h2 className="text-[#1A1A1A] text-center font-dm-sans text-[45px] font-bold leading-[36px]">120+</h2>
