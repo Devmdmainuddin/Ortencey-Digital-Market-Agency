@@ -4,7 +4,7 @@ import Bredcumb from "../../components/shared/Bredcumb";
 import Container from "../../components/shared/Container";
 import Image from "../../components/shared/Image";
 import { FaMinus, FaPlus } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+
 
 const Faq = () => {
     const [isOpen, setIsOpen] = useState(false);

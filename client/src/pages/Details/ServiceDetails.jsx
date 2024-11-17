@@ -100,7 +100,7 @@ const ServiceDetails = () => {
                                 <form action="" className="max-w-[608px] flex justify-center items-center flex-col gap-5 mt-[47px]">
                                     <input type="text" name="" id="" placeholder="Your Name" className="py-[15px] px-[26px] text-gray-500 font-dm-sans text-base font-normal leading-7 w-full outline-0 rounded-full" />
                                     <input type="email" name="" id="" placeholder="Your Email Address" className="py-[15px] px-[26px] text-gray-500 font-dm-sans text-base font-normal leading-7 w-full outline-0 rounded-full" />
-                                    <textarea type="text" name="" id="" placeholder="Your Message" className="py-[15px] px-[26px] text-gray-500 font-dm-sans text-base font-normal leading-7 w-full h-[173px] outline-0 rounded-[20px] resize-none" />
+                                    <textarea  name="" id="" placeholder="Your Message" className="py-[15px] px-[26px] text-gray-500 font-dm-sans text-base font-normal leading-7 w-full h-[173px] outline-0 rounded-[20px] resize-none" />
                                     <button className="py-[15px] px-[33px] mt-[30px] inline text-white bg-gradient-to-r from-[#FE651B] to-[#FFAA52] rounded-full mr-auto">Send Message</button>
                                 </form>
                             </div>

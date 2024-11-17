@@ -17,7 +17,7 @@ const BlogLeftSide = () => {
             comments: [],
             readTime: "",
             views: 120,
-           createAt: "2024-11-12T10:15:30.000Z",
+            createAt: "2024-11-12T10:15:30.000Z",
         },
         {
             image: "/bgca.jpg",
@@ -59,7 +59,7 @@ const BlogLeftSide = () => {
             comments: [],
             readTime: "",
             views: 120,
-           createAt: "2024-11-12T10:15:30.000Z",
+            createAt: "2024-11-12T10:15:30.000Z",
         },
         {
             image: "/bgca.jpg",
@@ -101,7 +101,7 @@ const BlogLeftSide = () => {
             comments: [],
             readTime: "",
             views: 120,
-           createAt: "2024-11-12T10:15:30.000Z",
+            createAt: "2024-11-12T10:15:30.000Z",
         },
         {
             image: "/bgca.jpg",
@@ -131,24 +131,24 @@ const BlogLeftSide = () => {
             views: 120,
             createAt: "2024-11-13T10:15:30.000Z",
         },
-       
+
 
     ]
     return (
         <div>
             <Bredcumb />
             <Container>
-            <div className="flex gap-6 justify-between flex-wrap my-[120px]">
-            <aside className="w-[464px]">
-                        <Sidebar/>
+                <div className="flex gap-6 justify-between flex-wrap my-[120px]">
+                    <aside className="w-[464px]">
+                        <Sidebar />
 
                     </aside>
                     <main className="flex-1">
-                    <div className=" flex gap-6 flex-wrap justify-center mt-[47px] w-full">
-                        {blogs.map((item, idx) => <BlogCard key={idx} item={item}></BlogCard>)}
-                    </div>
+                        <div className=" flex gap-6 flex-wrap justify-center mt-[47px] w-full">
+                            {blogs.map((item, idx) => <BlogCard key={idx} item={item}></BlogCard>)}
+                        </div>
                     </main>
-                    
+
                 </div>
             </Container>
         </div>

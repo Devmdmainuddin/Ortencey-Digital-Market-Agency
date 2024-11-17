@@ -145,7 +145,9 @@ const Navbar = () => {
                                 <li className="group relative cursor-pointer ">
                                     <Link className='border-b-2 py-6 flex items-center justify-between border-white hover:text-[#FE651B] hover:border-[#FE651B] transition-all duration-500 gap-2'>Pages <IoIosArrowDown /> </Link>
                                     <div className="invisible absolute z-50 flex w-[180px] flex-col bg-gray-100 py-1 px-4 text-gray-800 shadow-xl group-hover:visible">
-
+                                    <Link to='/portfolio' className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
+                                    portfolio
+                                        </Link>
                                         <Link to='/pricing' className="my-2 block border-b border-gray-100 py-1 font-semibold text-gray-500 hover:text-black md:mx-2">
                                             Pricing
                                         </Link>
