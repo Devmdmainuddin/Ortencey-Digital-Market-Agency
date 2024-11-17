@@ -9,7 +9,7 @@ const Cart = () => {
         <div>
             <Bredcumb />
             <Container>
-                <div className='my-[120px] flex justify-between gap-6 flex-col md:flex-row'>
+                <div className='my-[120px] flex justify-between flex-wrap gap-6 flex-col md:flex-row'>
                     <main className='flex-1 '>
 
                         <table className="   w-full border-separate border-spacing-y-4">
