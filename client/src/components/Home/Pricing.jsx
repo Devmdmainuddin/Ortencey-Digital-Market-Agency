@@ -84,7 +84,7 @@ const Pricing = () => {
                             <img src='/p2.png' alt='' className='rounded-[55px] w-12 h-12 '></img>
                         </div>
                     </div>
-                    <div className="w-[464px] group py-8 px-[44px]  rounded-md shadow-md relative transition duration-500">
+                    <div className="w-[464px] group py-8 px-[44px] bg-[#F4F4FE] rounded-md shadow-md relative transition duration-500">
                         <h3 className="text-[#1a1a1a] font-nunito text-[25px] font-bold leading-[34px]">Silver Plan</h3>
                         <div className="mb-4">
                             <span className="relative -top-6 right-1 text-xl text-[#3661FC] font-medium">$</span>
