@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-
+const productRoutes=require("./routes/product-routes/index")
 
 
 const app = express();
@@ -19,6 +19,9 @@ app.use(express.json());
 mongoose.connect(MONGO_URL)
 .then(()=>console.log("Mongodb Connected"))
 .catch(error => console.log(error));
+
+
+app.use('/product', productRoutes);
 
 app.use((err, req, res, next) => {
     console.log(err.stack);
