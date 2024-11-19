@@ -3,9 +3,10 @@ import { RiShoppingBagLine } from "react-icons/ri";
 import '@smastrom/react-rating/style.css'
 import Image from '../../components/shared/Image'
 import { Link } from 'react-router-dom';
-const ShopCard = () => {
+const ShopCard = ({item}) => {
+  
     return (
-        <div className="w-[342px] bg-[#F4F4FE] p-[30px] rounded-[15px]">
+        <div className="  bg-[#F4F4FE] p-[30px] rounded-[15px]">
             <div className="flex justify-between">
                 <div>
                     <span className="bg-[#0065F6] text-white font-dm-sans text-xs font-normal leading-[10px] py-[5px] px-[9px] rounded-full ">new</span>
@@ -18,11 +19,11 @@ const ShopCard = () => {
 
             </div>
             <div className="image w-[212px] h-[258px] rounded-[20px] mx-auto mt-[50px] mb-9">
-                <Image src="/bgca.jpg" alt="Shop Card" className='w-full h-full object-cover rounded-[20px]' />
+                <Image src={item?.thumbnail} alt="Shop Card" className='w-full h-full object-cover rounded-[20px]' />
             </div>
 
-            <Link to='/shopsDetails'> <h2 className='text-[#3661fc] font-dm-sans text-base font-medium leading-[26px]'>Apple iPhone 14 Pro Max 128 GB Deep Purple (eSIM)</h2> </Link>
-            <p className='text-[#1a1a1a] font-dm-sans text-lg font-medium leading-[26px] mt-3'>$2000</p>
+            <Link to='/shopsDetails'> <h2 className='text-[#3661fc] font-dm-sans text-base font-medium leading-[26px]'>{item?.title}</h2> </Link>
+            <p className='text-[#1a1a1a] font-dm-sans text-lg font-medium leading-[26px] mt-3'>${item?.price}</p>
             <button className='w-full bg-white capitalize text-[#3661fc] font-dm-sans text-base font-medium leading-[26px] flex gap-3 items-center py-3 justify-center rounded-full mt-[30px]'> <RiShoppingBagLine />add to cart</button>
         </div>
     );

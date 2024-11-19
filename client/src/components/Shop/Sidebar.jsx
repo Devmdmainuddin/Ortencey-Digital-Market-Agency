@@ -1,8 +1,8 @@
 import { CiSearch } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
+const Sidebar = ({categorey,brand}) => {
 
-const Sidebar = () => {
     return (
         <div>
             <div className="p-10 border border-[#FE651B] rounded-[20px] group">
@@ -15,15 +15,20 @@ const Sidebar = () => {
             </div>
 
 
+            
             <div className="p-10 border border-[#FE651B] rounded-[20px] group mt-[50px]">
                 <h2 className="text-[#1a1a1a] font-nunito text-[25px] font-bold leading-[34px] relative  before:absolute before:-bottom-2.5  before:w-full before:h-[2px] before:bg-[#EDEDFF] after:absolute after:-bottom-2.5 after:left-0   after:bg-red-500 after:w-[60px] after:h-[2px] after:rounded-full after:content-[''] group-hover:after:w-full transition-all duration-500 ease-in-out">Product categories</h2>
                 <ul className="mt-5 list-disc list-inside">
-                    <li className="flex justify-between items-center gap-3 text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[26px]"><Link to="#">Category 1</Link> <p className="flex-1 h-[1px] border border-dotted "></p> <span>(05)</span></li>
-                    <li className="flex justify-between items-center gap-3 text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[26px]"><Link to="#">Category 2</Link> <p className="flex-1 h-[1px] border border-dotted "></p> <span>(05)</span></li>
-                    <li className="flex justify-between items-center gap-3 text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[26px]"><Link to="#">Category 3</Link> <p className="flex-1 h-[1px] border border-dotted "></p> <span>(05)</span></li>
-                    <li className="flex justify-between items-center gap-3 text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[26px]"><Link to="#">Category 4</Link> <p className="flex-1 h-[1px] border border-dotted "></p> <span>(05)</span></li>
+                    {categorey.map((item,idx)=>  <li key={idx} className="flex justify-between items-center gap-3 text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[26px]"><Link to="#">{item}</Link> <p className="flex-1 h-[1px] border border-dotted "></p> <span>(05)</span></li>)}
                 </ul>
             </div>
+            <div className="p-10 border border-[#FE651B] rounded-[20px] group mt-[50px]">
+                <h2 className="text-[#1a1a1a] font-nunito text-[25px] font-bold leading-[34px] relative  before:absolute before:-bottom-2.5  before:w-full before:h-[2px] before:bg-[#EDEDFF] after:absolute after:-bottom-2.5 after:left-0   after:bg-red-500 after:w-[60px] after:h-[2px] after:rounded-full after:content-[''] group-hover:after:w-full transition-all duration-500 ease-in-out">Product brand</h2>
+                <ul className="mt-5 list-disc list-inside">
+                    {brand.map((item,idx)=>  <li key={idx} className="flex justify-between items-center gap-3 text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[26px]"><Link to="#">{item}</Link> <p className="flex-1 h-[1px] border border-dotted "></p> <span>(05)</span></li>)}
+                </ul>
+            </div>
+
             <div className="p-10 border border-[#FE651B] rounded-[20px] group mt-[50px]">
                 <h2 className="text-[#1a1a1a] font-nunito text-[25px] font-bold leading-[34px] relative  before:absolute before:-bottom-2.5  before:w-full before:h-[2px] before:bg-[#EDEDFF] after:absolute after:-bottom-2.5 after:left-0   after:bg-red-500 after:w-[60px] after:h-[2px] after:rounded-full after:content-[''] group-hover:after:w-full transition-all duration-500 ease-in-out">Availability</h2>
                 <ul className="list-disc list-inside mt-[20px]">
