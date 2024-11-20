@@ -1,12 +1,14 @@
 
+import { useState } from "react";
 import Image from "../shared/Image";
 import { CiCalendarDate, CiSearch } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const DetailsSidebar = ({categorey,tags,blogs}) => {
-    
-    
-
- 
+    const navigate = useNavigate();
+  
+    const handleCategoryFilter = (item) => {
+        navigate(`/blogs?blogscategory=${encodeURIComponent(item)}`);
+      };
     return (
         <div>
             <div className="p-10 border border-[#FE651B] rounded-[20px] group">
@@ -22,7 +24,7 @@ const DetailsSidebar = ({categorey,tags,blogs}) => {
             <div className="p-10 border border-[#FE651B] rounded-[20px] group mt-[50px]">
                 <h2 className="text-[#1a1a1a] font-nunito text-[25px] font-bold leading-[34px] relative  before:absolute before:-bottom-2.5  before:w-full before:h-[2px] before:bg-[#EDEDFF] after:absolute after:-bottom-2.5 after:left-0   after:bg-red-500 after:w-[60px] after:h-[2px] after:rounded-full after:content-[''] group-hover:after:w-full transition-all duration-500 ease-in-out">Categorys</h2>
                 <ul className="mt-5">
-                    {categorey.map((item, idx) => <li  key={idx} className="flex justify-between items-center gap-3 text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[26px] mt-3"><Link to="#">{item}</Link> <p className="flex-1 h-[1px] border border-dotted "></p> <span>(05)</span></li>)}
+                    {categorey.map((item, idx) => <li onClick={()=>handleCategoryFilter(item)} key={idx} className="flex justify-between items-center gap-3 text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[26px] mt-3"><Link to="#">{item}</Link> <p className="flex-1 h-[1px] border border-dotted "></p> <span>(05)</span></li>)}
                 </ul>
             </div>
             <div className="p-10 border border-[#FE651B] rounded-[20px] group mt-[50px]">
