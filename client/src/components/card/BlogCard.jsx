@@ -5,7 +5,7 @@ import { FaRegEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const BlogCard = ({ item }) => {
-    const { image, title, category, totalComments, views, author, createAt } = item;
+    const {id, image, title, category, totalComments, views, author, createAt } = item;
     return (
         <div className="w-full sm:w-[464px] bg-[#F4F4FF] rounded-[30px]">
             <div className="image rounded-[30px] w-full sm:w-[464px] h-auto sm:h-[387px] relative">
@@ -25,7 +25,7 @@ const BlogCard = ({ item }) => {
                     <p className="flex items-center gap-1 text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[26px]"> <FaRegMessage className="text-[#3661FC]" />{totalComments}</p>
                     <p className="flex items-center gap-1 text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[26px]"><FaRegEye className="text-[#3661FC]" />{views} views</p>
                 </div>
-                <Link to='/blogsDetails'> <h2 className="mt-4 text-[#1A1A1A] hover:text-[#3661FC] font-nunito text-[25px] font-bold leading-[34px] text-left hover:underline transition-all duration-500">{title}</h2></Link>
+                <Link to={`/blog/${id}`}> <h2 className="mt-4 text-[#1A1A1A] hover:text-[#3661FC] font-nunito text-[25px] font-bold leading-[34px] text-left hover:underline transition-all duration-500">{title}</h2></Link>
             </div>
         </div>
     );

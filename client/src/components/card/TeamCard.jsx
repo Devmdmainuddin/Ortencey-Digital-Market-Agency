@@ -4,11 +4,11 @@ import Image from "../shared/Image";
 
 
 const TeamCard = ({ item }) => {
-    const { image, name, role } = item;
+    const { id,image, name, role } = item;
     return (
         <div className="relative group overflow-hidden w-[342px] bg-white p-5  rounded-[30px] shadow-lg " >
             <div className=" rounded-[20px] w-[302px] h-[319px]">
-                <Image src={image} alt={name} className="rounded-[20px]"></Image>
+             <Link to={`/team/${id}`}><Image src={image} alt={name} className="rounded-[20px]"></Image> </Link>   
             </div>
 
             <div className="text-center pt-5 ">

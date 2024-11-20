@@ -4,30 +4,34 @@ import Container from "../../components/shared/Container";
 import Image from "../../components/shared/Image";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoBagHandleSharp } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 
 const TeamDetails = () => {
+    const teams = useLoaderData();
+    const { id } = useParams();
+    const team = teams.find(item => item.id == parseInt(id));
+   
     return (
         <div>
             <Bredcumb />
             <Container>
                 <div className="flex gap-6 justify-between flex-wrap bg-[#F4F4FF] mt-[120px] mb-[56px] p-[30px]">
                     <div className="image w-[555px] h-[535px] rounded-[20px]">
-                        <Image src="/bgca.jpg" alt="Team Member" className='rounded-[20px]' />
+                        <Image src={team?.image} alt="Team Member" className='rounded-[20px]' />
                     </div>
                     <div className="content max-w-[568px] ">
-                        <h2 className="text-[#1A1A1A] font-nunito text-[36px] font-bold leading-[56px]">David Phillips</h2>
-                        <p className="text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[26px]">Senior Manager</p>
+                        <h2 className="text-[#1A1A1A] font-nunito text-[36px] font-bold leading-[56px]">{team.name}</h2>
+                        <p className="text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[26px]">{team.role}</p>
                         <div>
                             <ul className="mt-8">
-                                <li className="text-[#252424] font-dm-sans text-[20px] font-medium leading-[50px] flex gap-3 items-center"><IoBagHandleSharp className="text-[#0064F6]" />  Experience: <span className="text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[50px]"> 15 Years</span></li>
-                                <li className="text-[#252424] font-dm-sans text-[20px] font-medium leading-[50px] flex gap-3 items-center my-3"><MdOutlineMessage className="text-[#0064F6]" /> E-mail: <span className="text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[50px]">icourtnyhenry@example.com</span></li>
-                                <li className="text-[#252424] font-dm-sans text-[20px] font-medium leading-[50px] flex gap-3 items-center"><MdCall className="text-[#0064F6]" /> Phone: <span className="text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[50px]">+1-800-456-478-00</span></li>
-                                <li className="text-[#252424] font-dm-sans text-[20px] font-medium leading-[50px] flex gap-3 items-center mt-3"><FaLocationDot className="text-[#0064F6]" /> Location: <span className="text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[50px]">380 St Kilda Road, Melbourne
-                                    VIC 3004, Australia</span></li>
+                                <li className="text-[#252424] font-dm-sans text-[20px] font-medium leading-[50px] flex gap-3 items-center"><IoBagHandleSharp className="text-[#0064F6]" />  Experience: <span className="text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[50px]"> {team.experience}</span></li>
+                                <li className="text-[#252424] font-dm-sans text-[20px] font-medium leading-[50px] flex gap-3 items-center my-3"><MdOutlineMessage className="text-[#0064F6]" /> E-mail: <span className="text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[50px]">{team.email}</span></li>
+                                <li className="text-[#252424] font-dm-sans text-[20px] font-medium leading-[50px] flex gap-3 items-center"><MdCall className="text-[#0064F6]" /> Phone: <span className="text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[50px]">{team.phone}</span></li>
+                                <li className="text-[#252424] font-dm-sans text-[20px] font-medium leading-[50px] flex gap-3 items-center mt-3"><FaLocationDot className="text-[#0064F6]" /> Location: <span className="text-[#6B6161] font-dm-sans text-[16px] font-normal leading-[50px]">{team.location}
+                                    </span></li>
                             </ul>
                             <div className="flex justify-between mt-[50px]">
                                 <h2 className="text-[#1A1A1A] font-dm-sans text-[20px] font-medium leading-[26px]">Follow Me: </h2>
@@ -76,20 +80,16 @@ const TeamDetails = () => {
                     </div>
                     <div className="max-w-[701px]">
                         <h2 className="text-[#1A1A1A] font-nunito text-[46px] font-bold leading-[56px]">Personal Experience and Skills</h2>
-                        <p className="text-[#636363] mt-5 font-poppins text-[16px] font-normal leading-[26px]">Since joining Sotcox in 2009 .Web design encompasses many different skills and discipli
-                            web graphic design; user interface design (UI design); authoring, including standardise
-                            optimization. Often many individuals will work in teams covering different aspects of the
-
-                            The term  web design is normally used to describe the design process relating to the
-                            front-end (client side) design of a website including writing markup. Web design partiy
-                            overlaps web engineering in the broader scope of web development.</p>
+                        <p className="text-[#636363] mt-5 font-poppins text-[16px] font-normal leading-[26px]">{team.personalExperience}.</p>
+                        <p className="text-[#636363] mt-3 font-poppins text-[16px] font-normal leading-[26px]">{team.shortDetails}.</p>
+                        <p className="text-[#636363] mt-3 font-poppins text-[16px] font-normal leading-[26px]"> Skills :{team.skills.map((item,idx)=> <span key={idx} className="ml-1">{item} ,</span>)}.</p>
                     </div>
                 </div>
 
                 <div className="flex gap-6 justify-between flex-wrap bg-[#F4F4FF] py-12 px-[50px]">
                     <div>
                         <h2 className="text-[#1A1A1A] font-bold text-[46px] leading-[36px]">Contact Me</h2>
-                        <p className="text-[#6B6161] font-normal text-[16px] leading-[36px]"> Your email address will not be published. Required fields are marked </p>
+                        <p className="text-[#6B6161] font-normal text-[16px] leading-[36px] mt-2"> Your email address will not be published. Required fields are marked </p>
 
                         <form action="" className="max-w-[608px] flex justify-center items-center flex-col gap-5 mt-[30px]">
                             <div className="flex justify-between items-center gap-5 w-full">
@@ -105,7 +105,7 @@ const TeamDetails = () => {
 
 
                     <div className="image w-[658px] h-[525px] rounded-[20px]">
-                        <Image src="/bgca.jpg" alt="Team Member" className='rounded-[20px]' />
+                        <Image src="/contact.jpg" alt="Team Member" className='rounded-[20px]' />
                     </div>
                 </div>
 

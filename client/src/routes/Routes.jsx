@@ -46,8 +46,9 @@ export const router = createBrowserRouter([
           element: <ServiceDetails />,
         },
         {
-          path: "/teamDetails",
+          path: "/team/:id",
           element: <TeamDetails />,
+          loader: () =>fetch('/TeamData.json')
         },
         {
           path: "/portfolioDetails",
@@ -67,8 +68,9 @@ export const router = createBrowserRouter([
           loader: () =>fetch('/FakeData.json')
         },
         {
-          path: "/blogsDetails",
+          path: "/blog/:id",
           element: <BlogDetails />,
+          loader: () =>fetch('/BlogData.json')
         },
         {
           path: "/team",

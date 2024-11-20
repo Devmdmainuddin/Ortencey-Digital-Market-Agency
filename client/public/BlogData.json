@@ -1,0 +1,204 @@
+[
+    {
+      "id": 1,
+      "image": "/b.jpg",
+      "title": "Successful business partner have a meeting and discussing",
+      "description": "Two business partners discussing strategies and growth opportunities during a meeting.",
+      "category": "Digital Agency",
+      "author": "admin",
+      "date": "2024-11-12",
+      "tags":"business",
+      "totalComments": 25,
+      "comments": [
+        {
+          "username": "john_doe",
+          "comment": "This is a great example of teamwork!",
+          "commentedAt": "2024-11-13T08:00:00.000Z"
+        },
+        {
+          "username": "jane_smith",
+          "comment": "Interesting discussion points!",
+          "commentedAt": "2024-11-13T09:15:00.000Z"
+        }
+      ],
+      "readTime": "3 mins",
+      "views": 120,
+      "createAt": "2024-11-12T10:15:30.000Z"
+    },
+    {
+      "id": 2,
+      "image": "/ba.jpg",
+      "title": "Motivated colleagues celebrating corporate success together",
+      "description": "A team celebrating their corporate achievements and milestones in a fun and energetic environment.",
+      "category": "Business",
+      "author": "admin",
+      "date": "2024-11-18",
+      "tags": "meeting",
+      "totalComments": 25,
+      "comments": [
+        {
+          "username": "mark_lee",
+          "comment": "This is so inspiring to see!",
+          "commentedAt": "2024-11-19T11:00:00.000Z"
+        },
+        {
+          "username": "emma_brown",
+          "comment": "Celebrating success is always important!",
+          "commentedAt": "2024-11-19T12:30:00.000Z"
+        }
+      ],
+      "readTime": "4 mins",
+      "views": 120,
+      "createAt": "2024-11-18T10:15:30.000Z"
+    },
+    {
+      "id": 3,
+      "image": "/bab.jpg",
+      "title": "Man using a tablet to a work and connect with others",
+      "description": "A professional using a tablet to collaborate and stay productive while on the go.",
+     "category": "Corporate",
+      "author": "admin",
+      "date": "2024-11-13",
+      "tags": "celebration",
+      "totalComments": 25,
+      "comments": [
+        {
+          "username": "alex_white",
+          "comment": "Tablets are such a versatile tool for work!",
+          "commentedAt": "2024-11-14T09:45:00.000Z"
+        },
+        {
+          "username": "sophia_king",
+          "comment": "Great way to stay connected.",
+          "commentedAt": "2024-11-14T10:30:00.000Z"
+        }
+      ],
+      "readTime": "2 mins",
+      "views": 120,
+      "createAt": "2024-11-13T10:15:30.000Z"
+    },
+    {
+      "id": 4,
+      "image": "/c.jpg",
+      "title": "Brainstorming session with a dynamic marketing team",
+      "description": "Marketing experts collaborating on a creative advertising campaign.",
+      "category": "Marketing",
+      "author": "admin",
+      "date": "2024-11-14",
+      "tags": "technology",
+      "totalComments": 30,
+      "comments": [
+        {
+          "username": "nina_green",
+          "comment": "Love the creativity here!",
+          "commentedAt": "2024-11-15T10:00:00.000Z"
+        }
+      ],
+      "readTime": "5 mins",
+      "views": 200,
+      "createAt": "2024-11-14T09:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "image": "/d.jpg",
+      "title": "Developers working together on a new application",
+      "description": "Team of developers brainstorming on a cutting-edge project.",
+      "category": "Software Development",
+      "author": "admin",
+      "date": "2024-11-15",
+      "tags": "marketing",
+      "totalComments": 20,
+      "comments": [],
+      "readTime": "6 mins",
+      "views": 180,
+      "createAt": "2024-11-15T11:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "image": "/e.jpg",
+      "title": "Remote working setup with a productive vibe",
+      "description": "A professional showcasing their organized remote work setup.",
+      "category": "Remote Work",
+      "author": "admin",
+      "date": "2024-11-16",
+      "tags": "technology",
+      "totalComments": 15,
+      "comments": [
+        {
+          "username": "kevin_l",
+          "comment": "Looks like a great workspace!",
+          "commentedAt": "2024-11-17T09:00:00.000Z"
+        }
+      ],
+      "readTime": "3 mins",
+      "views": 100,
+      "createAt": "2024-11-16T08:30:00.000Z"
+    },
+    {
+      "id": 7,
+      "image": "/f.jpg",
+      "title": "Creative team discussing new branding ideas",
+      "description": "A branding team brainstorming innovative ideas for a new project.",
+      "category": "Design",
+      "author": "admin",
+      "date": "2024-11-17",
+      "tags": "productivity",
+      "totalComments": 18,
+      "comments": [],
+      "readTime": "4 mins",
+      "views": 90,
+      "createAt": "2024-11-17T10:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "image": "/g.jpg",
+      "title": "Entrepreneurs sharing insights at a business meetup",
+      "description": "A group of entrepreneurs networking and sharing business insights.",
+      "category": "Entrepreneurship",
+      "author": "admin",
+      "date": "2024-11-18",
+      "tags": "branding",
+      "totalComments": 10,
+      "comments": [],
+      "readTime": "7 mins",
+      "views": 300,
+      "createAt": "2024-11-18T09:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "image": "/h.jpg",
+      "title": "Software engineers debugging an app together",
+      "description": "A collaborative effort to solve technical challenges in real-time.",
+      "category": "Tech",
+      "author": "admin",
+      "date": "2024-11-19",
+      "tags": "business",
+      "totalComments": 12,
+      "comments": [],
+      "readTime": "5 mins",
+      "views": 150,
+      "createAt": "2024-11-19T08:30:00.000Z"
+    },
+    {
+      "id": 10,
+      "image": "/i.jpg",
+      "title": "Workshop on advanced digital marketing strategies",
+      "description": "An interactive session on implementing digital marketing strategies.",
+      "category": "Digital Marketing",
+      "author": "admin",
+      "date": "2024-11-20",
+      "tags": "marketing",
+      "totalComments": 35,
+      "comments": [
+        {
+          "username": "lisa_m",
+          "comment": "This workshop sounds very useful!",
+          "commentedAt": "2024-11-21T10:00:00.000Z"
+        }
+      ],
+      "readTime": "8 mins",
+      "views": 400,
+      "createAt": "2024-11-20T09:00:00.000Z"
+    }
+  ]
+  

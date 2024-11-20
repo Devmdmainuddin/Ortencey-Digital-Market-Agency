@@ -27,7 +27,7 @@ const ShopDetails = () => {
     const newpro = products?.filter(items => items.category === product.category);
     setRelatedProducts(newpro);
   }, [products,product.category]);
-  console.log(product);
+
   const dispatch = useDispatch();
   const handlecard = async i => {
     try {
