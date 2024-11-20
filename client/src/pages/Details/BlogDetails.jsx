@@ -9,11 +9,14 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 import BlogCard from "../../components/card/BlogCard";
 import { FaInstagramSquare } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import DetailsSidebar from "../../components/blog/DetailsSidebar";
 
 
 const BlogDetails = () => {
     const blogs = useLoaderData();
     const [relatedBlogs, setRelatedBlogs] = useState([]);
+    const [categorey, setCategorey] = useState([])
+    const [tags, setTags] = useState([])
     const { id } = useParams();
     const blog = blogs.find(item => item.id == parseInt(id));
 
@@ -21,6 +24,13 @@ const BlogDetails = () => {
         const newpro = blogs?.filter(items => items.category === blog.category);
         setRelatedBlogs(newpro);
       }, [blogs,blog.category]);
+
+      useEffect(() => {
+        if (blogs) {
+            setCategorey([... new Set(blogs?.map(item => item.category))])
+            setTags([... new Set(blogs?.map(item => item.tags))])
+        }
+    }, [blogs])
 
     return (
         <div>
@@ -96,7 +106,8 @@ const BlogDetails = () => {
                             <div className="left flex gap-3 items-center">
                                 <h3 className="text-[26px] font-nunito font-bold leading-[34px] text-[#1A1A1A]">Tag:</h3>
                                 <div className="flex gap-[17px] items-center">
-                                    {blog.tags.map((tag,idx)=> <span key={idx} className="text-[#636363] hover:text-[#3661FC] transition-all duration-500 font-dm-sans text-base font-normal leading-[26px]">{tag}</span>)}
+                                  
+                                    <span  className="text-[#636363] hover:text-[#3661FC] transition-all duration-500 font-dm-sans text-base font-normal leading-[26px]">{blog.tags}</span>
                                 </div>
                             </div>
                             <div className="right flex gap-3 items-center">
@@ -149,7 +160,8 @@ const BlogDetails = () => {
                         </div>
                     </main>
                     <aside className="w-[464px]">
-                        <Sidebar />
+                        {/* <Sidebar /> */}
+                        <DetailsSidebar categorey={categorey} tags={tags} blogs={blogs}/>
 
                     </aside>
                 </div>

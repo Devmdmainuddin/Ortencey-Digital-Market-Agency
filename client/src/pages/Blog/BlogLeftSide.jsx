@@ -9,7 +9,7 @@ const BlogLeftSide = () => {
     const [blogs]=useBlogs();
     const [item, setItem] = useState([])
     const [categorey, setCategorey] = useState([])
-    const [brand, setBrand] = useState([])
+    const [tags, setTags] = useState([])
     let [searchInput, setSearchInput] = useState("");
     // let [searchFilter, setSearchFilter] = useState([]);
 
@@ -27,19 +27,27 @@ const BlogLeftSide = () => {
     useEffect(() => {
         if (blogs) {
             setCategorey([... new Set(blogs?.map(item => item.category))])
-            setBrand([... new Set(blogs?.map(item => item.brand))])
+            setTags([... new Set(blogs?.map(item => item.tags))])
             setItem(blogs)
         }
     }, [blogs])
+    const handleCategoryfilter = filter => {
+        const filterItem = blogs?.filter(item => item.category === filter);
+        setItem(filterItem);
+    }
 
-    
+    const handleTags = filter => {
+        const filterItem = blogs?.filter(item => item.tags === filter);
+        setItem(filterItem);
+    }
+
     return (
         <div>
             <Bredcumb />
             <Container>
                 <div className="flex gap-6 justify-between flex-wrap my-[120px]">
                     <aside className="w-[464px]">
-                        <Sidebar handleInput={handleInput} searchInput={searchInput}/>
+                        <Sidebar handleInput={handleInput} handleCategoryfilter={handleCategoryfilter} categorey={categorey} searchInput={searchInput} handleTags={handleTags} tags={tags}/>
 
                     </aside>
                     <main className="flex-1">

@@ -10,7 +10,7 @@ const Blog = () => {
     const [blogs]=useBlogs();
     const [item, setItem] = useState([])
     const [categorey, setCategorey] = useState([])
-    const [brand, setBrand] = useState([])
+    const [tags, setTags] = useState([])
     let [searchInput, setSearchInput] = useState("");
     // let [searchFilter, setSearchFilter] = useState([]);
 
@@ -33,18 +33,18 @@ const Blog = () => {
     useEffect(() => {
         if (blogs) {
             setCategorey([... new Set(blogs?.map(item => item.category))])
-            setBrand([... new Set(blogs?.map(item => item.brand))])
+            setTags([... new Set(blogs?.map(item => item.tags))])
             setItem(blogs)
         }
     }, [blogs])
-    // const handleCategoryfilter = filter => {
-    //     const filterItem = blogs?.filter(item => item.category === filter);
-    //     setItem(filterItem);
-    // }
-    // const handleBrandfilter = filter => {
-    //     const filterItem = blogs?.filter(item => item.brand === filter);
-    //     setItem(filterItem);
-    // }
+    const handleCategoryfilter = filter => {
+        const filterItem = blogs?.filter(item => item.category === filter);
+        setItem(filterItem);
+    }
+    const handleTags = filter => {
+        const filterItem = blogs?.filter(item => item.tags === filter);
+        setItem(filterItem);
+    }
 
     return (
         <div>
@@ -57,7 +57,7 @@ const Blog = () => {
                     </div>
                     </main>
                     <aside className="w-[464px]">
-                        <Sidebar handleInput={handleInput} searchInput={searchInput}/>
+                    <Sidebar handleInput={handleInput} handleCategoryfilter={handleCategoryfilter} categorey={categorey} searchInput={searchInput} handleTags={handleTags} tags={tags}/>
                    
 
                     </aside>
