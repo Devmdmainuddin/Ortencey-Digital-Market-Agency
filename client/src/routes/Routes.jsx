@@ -22,6 +22,7 @@ import ShopDetails from "../pages/Details/ShopDetails";
 import BlogDetails from "../pages/Details/BlogDetails";
 import Faq from "../pages/Faq/Faq";
 import Shop from "../pages/Shop/Shop";
+import AddProductCard from "../pages/Dashboard/AddProductCard";
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -53,8 +54,17 @@ export const router = createBrowserRouter([
           element: <PortfolioDetails />,
         },
         {
-          path: "/shopsDetails",
+          path: "/addProductCard",
+          element: <AddProductCard />,
+        },
+        // {
+        //   path: "/shopsDetails",
+        //   element: <ShopDetails />,
+        // },
+        {
+          path: "/product/:id",
           element: <ShopDetails />,
+          loader: () =>fetch('/FakeData.json')
         },
         {
           path: "/blogsDetails",

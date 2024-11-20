@@ -10,9 +10,10 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaFacebookF, FaInstagramSquare, FaLinkedin, } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
+import { useSelector } from "react-redux";
 // IoMdClose,
 const Navbar = () => {
-
+    const carts = useSelector((state) => state.cart.cartItem)
     const [showMenu, setShowMenu] = useState(false);
     const [proOpen, setProOpen] = useState(false);
 
@@ -189,7 +190,7 @@ const Navbar = () => {
                         {/* Profile */}
                         <div className=" hidden lg:flex  gap-6 items-center">
                             <button className="border border-[#3661fc] text-[#3661fc] text-xl bg-[#f4f4ff] p-4 rounded-full"><CiSearch /></button>
-                            <button className="border-2 border-[#3661fc] text-[#3661fc] text-xl bg-[#f4f4ff] p-4 rounded-full relative"><AiOutlineShopping /> <span className="absolute top-1 -right-2 bg-[#3661fc] text-white text-[12px] rounded-full p-1 w-5 h-5  flex justify-center items-center">3</span></button>
+                            <button className="border-2 border-[#3661fc] text-[#3661fc] text-xl bg-[#f4f4ff] p-4 rounded-full relative"><AiOutlineShopping /> <span className="absolute top-1 -right-2 bg-[#3661fc] text-white text-[12px] rounded-full p-1 w-5 h-5  flex justify-center items-center">{carts.length}</span></button>
                             <button className="hidden  text-white bg-[#3661fc] py-[15px] px-[29px] font-dm-sans text-[18px] font-normal leading-[26px] xl:flex items-center gap-4 rounded-full"> Free Quote  <FaArrowRightLong /></button>
 
                         </div>

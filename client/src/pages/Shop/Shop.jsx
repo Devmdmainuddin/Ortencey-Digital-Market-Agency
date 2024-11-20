@@ -7,19 +7,46 @@ import useProducts from '../../hooks/useProducts';
 
 const Shop = () => {
     const [products]= useProducts()
+    const [number, setNumber] = useState(6)
+    const [item, setItem] = useState([])
     const [categorey, setCategorey] = useState([])
     const [brand, setBrand] = useState([])
+    let [searchInput, setSearchInput] = useState("");
+    let [searchFilter, setSearchFilter] = useState([]);
+
+
+
+
+
+    const handleInput = (e) => {
+        setSearchInput(e.target.value)
+        if (e.target.value === "") {
+            setItem([])
+        } else {
+            const searchOne = products?.filter(item => item.title.toLowerCase().includes(e.target.value.toLowerCase()))
+            setItem(searchOne)
+        }
+    }
+
+
+
     useEffect(() => {
         if (products) {
             setCategorey([... new Set(products?.map(item => item.category))])
             setBrand([... new Set(products?.map(item => item.brand))])
             // setColors([... new Set(data?.map(item => item.color))])
             // setDiscount([... new Set(data?.map(item => item.discount))])
-            // setItem(data)
+            setItem(products)
         }
-
     }, [products])
-
+    const handleCategoryfilter = filter => {
+        const filterItem = products?.filter(item => item.category === filter);
+        setItem(filterItem);
+    }
+    const handleBrandfilter = filter => {
+        const filterItem = products?.filter(item => item.brand === filter);
+        setItem(filterItem);
+    }
 
     return (
         <div>
@@ -27,7 +54,7 @@ const Shop = () => {
             <Container>
                 <div className="flex gap-6 justify-between flex-wrap my-[120px]">
                     <aside className="w-[342px]">
-                        <Sidebar categorey={categorey} brand={brand}/>
+                        <Sidebar categorey={categorey} brand={brand} handleCategoryfilter={handleCategoryfilter} handleBrandfilter={handleBrandfilter} searchInput={searchInput} handleInput={handleInput}/>
 
                     </aside>
                     <main className="flex-1 ">
@@ -42,7 +69,7 @@ const Shop = () => {
                             </select>
                         </div>
                         <div className='flex flex-wrap justify-center gap-6'>
-                          {products.map((item,idx)=><ShopCard key={idx} item={item}/>)}
+                          {item.map((item,idx)=><ShopCard key={idx} item={item}/>)}
                           
                             
                         </div>

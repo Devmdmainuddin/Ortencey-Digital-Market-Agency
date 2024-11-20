@@ -45,7 +45,7 @@ const Choose = () => {
                     </div>
                 </div>
                 <div className="image w-[708px] h-[460px] rounded-[50px relative">
-                    <Image src="/bgca.jpg" className="rounded-[50px]"></Image>
+                    <Image src="/hb.jpeg" className="rounded-[50px]"></Image>
                     <div className='w-[364px] flex gap-2 items-center absolute bottom-[30px] left-1/2 -translate-x-1/2 py-[15px] px-[50px] bg-white rounded-full '>
                         <span className='text-[46px] text-[#FF9A52] font-bold leading-[56px]'>25</span>
                         <div>

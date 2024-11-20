@@ -9,7 +9,7 @@ const Contact = () => {
                 <div className=" bg-[#3661FC] px-[80px] rounded-[50px] flex flex-wrap justify-between relative">
                     <div className="pt-[185px] pb-[85px]  flex flex-wrap justify-center xl:justify-between gap-6">
                         <div className="image w-full h-auto sm:w-[422px] sm:h-[422px] md:w-[592px] md:h-[566px] rounded-[20px]">
-                            <Image src='/bgca.jpg' alt='' className='rounded-[20px]'></Image>
+                            <Image src='/ap.jpg' alt='' className='rounded-[20px]'></Image>
                         </div>
                         <div className="content">
                             <div className="flex gap-2 justify-center items-center">
@@ -36,7 +36,7 @@ const Contact = () => {
                         {/* <div className=""> */}
                             <div className="flex gap-2 items-center">
                                 <div className="image w-[80px] h-[80px] rounded-full bg-white flex justify-center items-center">
-                                    <Image src="/ca.png" alt="" className='w-9 h-9 '/>
+                                    <img src="/ca.png" alt="" className='w-9 h-9 '/>
                                 </div>
                                 <div className="content">
                                     <h2 className="text-white text-center font-dm-sans text-[45px] font-bold leading-[36px]">1500</h2>
@@ -45,7 +45,7 @@ const Contact = () => {
                             </div>
                             <div className="flex gap-2 items-center">
                                 <div className="image w-[80px] h-[80px] rounded-full bg-white flex justify-center items-center">
-                                    <Image src="/ca.png" alt="" className='w-9 h-9 '/>
+                                    <img src="/ca.png" alt="" className='w-9 h-9 '/>
                                 </div>
                                 <div className="content">
                                     <h2 className="text-white text-center font-dm-sans text-[45px] font-bold leading-[36px]">1500</h2>
@@ -54,7 +54,7 @@ const Contact = () => {
                             </div>
                             <div className="flex gap-2 items-center">
                                 <div className="image w-[80px] h-[80px] rounded-full bg-white flex justify-center items-center">
-                                    <Image src="/ca.png" alt="" className='w-9 h-9 '/>
+                                    <img src="/ca.png" alt="" className='w-9 h-9 '/>
                                 </div>
                                 <div className="content">
                                     <h2 className="text-white text-center font-dm-sans text-[45px] font-bold leading-[36px]">1500</h2>

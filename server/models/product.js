@@ -31,18 +31,18 @@ const ProductSchema = new mongoose.Schema({
         type: Number,
         required: [true, "Please enter your product stock!"],
     },
-    images: [
-        {
-            public_id: {
-                type: String,
-                required: true,
-            },
-            url: {
-                type: String,
-                required: true,
-            },
-        },
-    ],
+    // image: [
+    //     {
+    //         public_id: {
+    //             type: String,
+    //             required: true,
+    //         },
+    //         url: {
+    //             type: String,
+    //             required: true,
+    //         },
+    //     },
+    // ],
     warranty_information: {
         type: String,
         required: [true, "Please enter your product warranty_information!"],

@@ -6,14 +6,52 @@ import { RiShoppingBagLine, } from 'react-icons/ri';
 import { FaFacebookF, FaFlag, FaMinus, FaPinterest, FaPlus, FaTwitter, } from 'react-icons/fa6';
 import { CiHeart } from "react-icons/ci";
 import { IoGitCompareOutline } from "react-icons/io5";
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ShopCard from '../../components/card/ShopCard'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import 'swiper/css/navigation';
 import { Autoplay, Navigation, } from 'swiper/modules';
+import Swal from 'sweetalert2';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../Featured/CartAPI/cartSlice';
+import { useEffect, useState } from 'react';
 const ShopDetails = () => {
+  const products = useLoaderData();
+  const [quntity, setQuntity] = useState(1)
+  const [relatedProducts,setRelatedProducts] = useState([])
+  const { id } = useParams();
+  const product = products.find(item => item.id == parseInt(id));
+  useEffect(() => {
+    const newpro = products?.filter(items => items.category === product.category);
+    setRelatedProducts(newpro);
+  }, [products,product.category]);
+  console.log(product);
+  const dispatch = useDispatch();
+  const handlecard = async i => {
+    try {
+      dispatch(addToCart({ ...i, qun: quntity, }))
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your items has been add to cart",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
+    catch (err) {
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: " product  cart not add  ",
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }
+
+  }
+
   return (
     <div>
       <Bredcumb />
@@ -22,49 +60,49 @@ const ShopDetails = () => {
           <div className="image flex justify-center flex-col-reverse lg:flex-row gap-[10px] ">
             <div className='flex gap-[10px] flex-row lg:flex-col'>
               <div className='w-[144px] h-[134px] bg-[#f2f7f8] rounded-[5px] py-[22px] px-[36px]'>
-                <Image src="https://via.placeholder.com/500x500" alt="Placeholder Image" />
+                <Image src={product.thumbnail} alt="Placeholder Image" />
               </div>
               <div className='w-[144px] h-[134px] bg-[#f2f7f8] rounded-[5px] py-[22px] px-[36px]'>
-                <Image src="https://via.placeholder.com/500x500" alt="Placeholder Image" />
+                <Image src={product.thumbnail} alt="Placeholder Image" />
               </div>
               <div className='w-[144px] h-[134px] bg-[#f2f7f8] rounded-[5px] py-[22px] px-[36px]'>
-                <Image src="https://via.placeholder.com/500x500" alt="Placeholder Image" />
+                <Image src={product.thumbnail} alt="Placeholder Image" />
               </div>
               <div className='w-[144px] h-[134px] bg-[#f2f7f8] rounded-[5px] py-[22px] px-[36px]'>
-                <Image src="https://via.placeholder.com/500x500" alt="Placeholder Image" />
+                <Image src={product.thumbnail} alt="Placeholder Image" />
               </div>
             </div>
             <div className='w-[496px] h-[568px] bg-[#f2f7f8] rounded-[5px] py-[56px] px-[66px]'>
-              <Image src="https://via.placeholder.com/500x500" alt="Placeholder Image" />
+              <Image src={product.thumbnail} alt="Placeholder Image" />
             </div>
 
           </div>
           <div className="content">
-            <h2 className='text-[#1A1A1A] font-dm-sans text-[30px] font-medium leading-[40px] tracking-normal text-left capitalize'>Apple iPhone 14 Pro Max 128 GB Deep Purple</h2>
+            <h2 className='text-[#1A1A1A] font-dm-sans text-[30px] font-medium leading-[40px] tracking-normal text-left capitalize'>{product.title}</h2>
             <div className=' font-dm-sans text-[14px] font-normal leading-[14px] flex items-center gap-1'>
               <span className='text-[#3661FC]'>iPhone</span> / <span className='text-[#6B6161]'>Sold 22 Products </span> / <span className='flex items-center gap-1 text-[14px] font-normal text-[#6B6161]'> <Rating style={{ maxWidth: 86 }} value={5} className='mt-1 inline-block' /> 6 Reviews</span>
             </div>
-            <p className='text-[#6B6161] font-medium text-[20px] leading-[24px] font-dm-sans mt-[30px]'> $2000 <span className='text-[#1A1A1A]'>$1800 </span></p>
+            <p className='text-[#6B6161] font-medium text-[20px] leading-[24px] font-dm-sans mt-[30px]'> $2000 <span className='text-[#1A1A1A]'>${product.price} </span></p>
             <p className='text-[#0CA640] font-normal text-[16px] leading-[16px] font-dm-sans'>45 In stock</p>
-            <p className='text-[#6B6161] font-dm-sans text-base font-normal leading-[26px] mt-[30px]'>There are many variations of passages of Lorem Ipsum available, but our athe majority
-              have suffered alteration in some form, by injected humour, or randomised our words
-              which don{`'`}t look even slightly believable.</p>
+            <p className='text-[#6B6161] font-dm-sans text-base font-normal leading-[26px] mt-[30px]'>{product.description}</p>
             <div className='flex gap-2 mt-[30px]'>
               <div className="w-[144px]  border border-[#FE651B]  flex justify-between items-center py-[5px] px-3 rounded-full">
                 <span
+                  onClick={() => setQuntity(quntity > 1 ? quntity - 1 : quntity)}
                   className="cursor-pointer inline-block  font-normal text-[#9A9A9A]"
 
                 >
                   <FaMinus />
                 </span>
-                <span className="inline-block   font-normal text-[#111111">5</span>
+                <span className="inline-block   font-normal text-[#111111">{quntity}</span>
                 <span
+                  onClick={() => setQuntity(quntity + 1)}
                   className="cursor-pointer inline-block  font-normal text-[#9A9A9A]"  >
                   <FaPlus />
                 </span>
               </div>
 
-              <button className='w-full md:max-w-[377px] bg-gradient-to-r from-[#FE651B] to-[#FFAA52]  capitalize text-white font-dm-sans text-base font-medium leading-[26px] flex gap-3 items-center py-3 justify-center rounded-full '> <RiShoppingBagLine />add to cart</button>
+              <button onClick={() => handlecard(product)} className='w-full md:max-w-[377px] bg-gradient-to-r from-[#FE651B] to-[#FFAA52]  capitalize text-white font-dm-sans text-base font-medium leading-[26px] flex gap-3 items-center py-3 justify-center rounded-full '> <RiShoppingBagLine />add to cart</button>
             </div>
             <div className='flex gap-3 items-center my-[22px]'>
               <button className='text-[#6B6161] font-dm-sans text-base font-normal leading-[18px] tracking-[0%] text-center capitalize flex gap-2 items-center'><CiHeart className='text-xl' /> add to wishlist</button>
@@ -263,21 +301,11 @@ const ShopDetails = () => {
 
               className="mySwiper Popular"
             >
-              <SwiperSlide >
-                <ShopCard />
-              </SwiperSlide>
-              <SwiperSlide >
-                <ShopCard />
-              </SwiperSlide>
-              <SwiperSlide >
-                <ShopCard />
-              </SwiperSlide>
-              <SwiperSlide >
-                <ShopCard />
-              </SwiperSlide>
-              <SwiperSlide >
-                <ShopCard />
-              </SwiperSlide>
+
+              {relatedProducts.map((item,idx)=> <SwiperSlide key={idx}>
+                <ShopCard item={item}/>
+              </SwiperSlide>)}
+         
 
 
 

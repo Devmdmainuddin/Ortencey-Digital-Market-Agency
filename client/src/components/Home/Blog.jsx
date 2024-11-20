@@ -5,7 +5,7 @@ import BlogCard from "../card/BlogCard";
 const Blog = () => {
     const blogs = [
         {
-            image: "/bgca.jpg",
+            image: "/b.jpg",
             title: "Successful business partner have a meeting and discussing",
             description: "",
             category: "Digital Agency",
@@ -19,7 +19,7 @@ const Blog = () => {
            createAt: "2024-11-12T10:15:30.000Z",
         },
         {
-            image: "/bgca.jpg",
+            image: "/ba.jpg",
             title: "Motivated colleagues celebrating corporate success together",
             description: "",
             category: "Digital Agency",
@@ -33,7 +33,7 @@ const Blog = () => {
             createAt: "2024-11-18T10:15:30.000Z",
         },
         {
-            image: "/bgca.jpg",
+            image: "/bab.jpg",
             title: "Man using a tablet to a work and connect with others",
             description: "",
             category: "Digital Agency",
