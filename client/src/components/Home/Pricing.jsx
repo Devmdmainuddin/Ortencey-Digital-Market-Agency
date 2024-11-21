@@ -47,8 +47,8 @@ const Pricing = () => {
                                 </span>  Market Research</Link>
                             </li>
                         </ul>
-                        <button className="text-[#1a1a1a] font-dm-sans text-[18px] font-normal leading-[23px] py-4 w-full border border-[#3661fc] rounded-full bg-[#F4F4FE] group-hover:border-[#fe651b] group-hover:bg-gradient-to-r from-[#fe651b] to-[#ffaa52] transition-all duration-500" href="#">Choose Plan</button>
-                        <div className="overlay h-[105px] w-[134px] border-b-[10px] border-l-[10px] border-white rounded-tr-[45px] rounded-bl-[45px]  absolute top-0 right-0 bg-[#3661fc] group-hover:bg-gradient-to-r from-[#fe651b] to-[#ffaa52] flex justify-center items-center transition-all duration-500">
+                        <button className="text-[#1a1a1a] font-dm-sans text-[18px] font-normal leading-[23px] py-4 w-full border border-[#3661fc] rounded-full bg-[#F4F4FE] group-hover:text-white group-hover:border-[#fe651b] group-hover:bg-[#fe651b] transition-all duration-500 ease-in-out" href="#">Choose Plan</button>
+                        <div className=" h-[105px] w-[134px] border-b-[10px] border-l-[10px] border-white rounded-tr-[45px] rounded-bl-[45px]  absolute top-0 right-0 bg-[#3661fc]  group-hover:bg-[#fe651b]  flex justify-center items-center  transition-all duration-500 ease-in-out">
                             <img src='/p2.png' alt='' className='rounded-[55px] w-12 h-12 '></img>
                         </div>
                     </div>
@@ -79,8 +79,8 @@ const Pricing = () => {
                                 </span>  Market Research</Link>
                             </li>
                         </ul>
-                        <button className="text-[#1a1a1a] font-dm-sans text-[18px] font-normal leading-[23px] py-4 w-full border border-[#3661fc] rounded-full bg-[#F4F4FE] group-hover:border-[#fe651b] group-hover:bg-gradient-to-r from-[#fe651b] to-[#ffaa52] transition-all duration-500" href="#">Choose Plan</button>
-                        <div className="overlay h-[105px] w-[134px] border-b-[10px] border-l-[10px] border-white rounded-tr-[45px] rounded-bl-[45px]  absolute top-0 right-0 bg-[#3661fc] group-hover:bg-gradient-to-r from-[#fe651b] to-[#ffaa52] flex justify-center items-center transition-all duration-500">
+                        <button className="text-[#1a1a1a] font-dm-sans text-[18px] font-normal leading-[23px] py-4 w-full border border-[#3661fc] rounded-full bg-[#F4F4FE] group-hover:text-white group-hover:border-[#fe651b] group-hover:bg-[#fe651b] transition-all duration-500 ease-in-out" href="#">Choose Plan</button>
+                        <div className=" h-[105px] w-[134px] border-b-[10px] border-l-[10px] border-white rounded-tr-[45px] rounded-bl-[45px]  absolute top-0 right-0 bg-[#3661fc]  group-hover:bg-[#fe651b]  flex justify-center items-center  transition-all duration-500 ease-in-out">
                             <img src='/p2.png' alt='' className='rounded-[55px] w-12 h-12 '></img>
                         </div>
                     </div>
@@ -111,8 +111,8 @@ const Pricing = () => {
                                 </span>  Market Research</Link>
                             </li>
                         </ul>
-                        <button className="text-[#1a1a1a] font-dm-sans text-[18px] font-normal leading-[23px] py-4 w-full border border-[#3661fc] rounded-full bg-[#F4F4FE] group-hover:border-[#fe651b] group-hover:bg-gradient-to-r from-[#fe651b] to-[#ffaa52] transition-all duration-500" href="#">Choose Plan</button>
-                        <div className="overlay h-[105px] w-[134px] border-b-[10px] border-l-[10px] border-white rounded-tr-[45px] rounded-bl-[45px]  absolute top-0 right-0 bg-[#3661fc] group-hover:bg-gradient-to-r from-[#fe651b] to-[#ffaa52] flex justify-center items-center transition-all duration-500">
+                        <button className="text-[#1a1a1a] font-dm-sans text-[18px] font-normal leading-[23px] py-4 w-full border border-[#3661fc] rounded-full bg-[#F4F4FE] group-hover:text-white group-hover:border-[#fe651b] group-hover:bg-[#fe651b] transition-all duration-500 ease-in-out" href="#">Choose Plan</button>
+                        <div className=" h-[105px] w-[134px] border-b-[10px] border-l-[10px] border-white rounded-tr-[45px] rounded-bl-[45px]  absolute top-0 right-0 bg-[#3661fc]  group-hover:bg-[#fe651b]  flex justify-center items-center  transition-all duration-500 ease-in-out">
                             <img src='/p2.png' alt='' className='rounded-[55px] w-12 h-12 '></img>
                         </div>
                     </div>

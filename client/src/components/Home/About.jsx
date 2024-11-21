@@ -10,7 +10,7 @@ const About = () => {
                 <div className="flex flex-col lg:flex-row items-center lg:gap-[120px]">
                     <div>
                         <div className="image w-[280px] sm:w-[480px] h-[320px] lg:w-[528px] lg:h-[456px] relative">
-                            <Image src='/dg.avif' alt='' className='border-[10px] border-white rounded-[48px]'></Image>
+                            <Image src='/dg.avif' alt='' className='border-[10px] border-white  rounded-[48px]'></Image>
                             <div className=" w-[184px] h-[264px] absolute bottom-1/2 right-0 translate-x-1/2 translate-y-1/2 rounded-full border-[10px] ">
                                 <Image src='/dgt.jpeg' alt='' className='rounded-full'></Image>
                             </div>

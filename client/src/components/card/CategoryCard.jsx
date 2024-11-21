@@ -5,10 +5,10 @@ const CategoryCard = ({item}) => {
     const {name,icon,image,description}= item;
     return (
         <div>
-            <div className="w-[342px] rounded-[48px] bg-slate-400">
+            <div className="w-[342px] rounded-[48px] bg-slate-400 group">
             <div className="image relative w-[342px] h-[225px]">
                     <Image src={image} alt='' className='rounded-tl-[45px] rounded-tr-[45px]'></Image>
-                    <div className="overlay h-[105px] w-[134px] border-b-[10px] border-r-[10px] rounded-tl-[45px] rounded-br-[55px] absolute top-0 left-0 bg-[#3661fc] flex justify-center items-center ">
+                    <div className="overlay h-[105px] w-[134px] border-b-[10px] border-r-[10px] rounded-tl-[45px] rounded-br-[55px] absolute top-0 left-0 bg-[#3661fc] flex justify-center items-center group-hover:text-white  group-hover:bg-[#fe651b] transition-all duration-500 ease-in-out">
                         <img src={icon} alt='' className=' w-12 h-12 '></img>
                     </div>
                 </div>
